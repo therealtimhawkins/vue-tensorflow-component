@@ -1,4 +1,4 @@
-# kitch-frontend
+# TensorFlow Vue Component
 
 > Vue component for object detection using TensorFlow
 
