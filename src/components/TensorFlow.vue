@@ -1,7 +1,7 @@
 <template>
   <div class="tensor-flow">
     <div style="text-align:center">
-      <video hidden ref="vid" id="vid" width="400" height="300"></video>
+      <video hidden ref="vid" id="vid" width="420" height="300"></video>
       <canvas ref="canvas" id="canvas"></canvas>
     </div>
   </div>
@@ -51,14 +51,14 @@ export default {
     renderPredictions: function (predictions) {
       const canvas = this.$refs.canvas
       const ctx = canvas.getContext('2d')
-      canvas.width = 400
+      canvas.width = 420
       canvas.height = 300
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
 
       const font = '16px sans-serif'
       ctx.font = font
       ctx.textBaseline = 'top'
-      ctx.drawImage(this.video, 0, 0, 400, 300)
+      ctx.drawImage(this.video, 0, 0, 420, 300)
 
       predictions.forEach(prediction => {
         const x = prediction.bbox[0]
